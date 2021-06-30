@@ -39,3 +39,7 @@ Once you're safely inside your isolated environment, you can install the depende
 > 📝 If you prefer a different way of isolating your environment~(e.g., using Docker, conda environments, pyenv, Poetry, etc.) you are free to do so as well.
 
 ## Adding your code
+
+Now you're ready to start hacking your solution!
+
+Open `solution.py`.
