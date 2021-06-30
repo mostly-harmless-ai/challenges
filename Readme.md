@@ -1,6 +1,6 @@
 # Mostly Harmless AI - Challenge Repository
 
-> ### ⭐ If you're interested in participating in a challenge, go over to [mostly-harmless-ai.github.io](https://mostly-harmless-ai.github.io/).
+> ### ⭐ If you're interested in participating go to [mostly-harmless-ai.github.io](https://mostly-harmless-ai.github.io/).
 
 ---
 
