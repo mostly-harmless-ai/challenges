@@ -68,4 +68,4 @@ Start by pushing to your own fork, this should be as easy as:
     git push origin main
 
 Go to your task fork in Github and look for the `Contribute` menu just under the green `Code`button.
-Click there and then on `Create pull request`.
+Click it and then click on `Create pull request`.
