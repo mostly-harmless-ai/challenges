@@ -22,11 +22,13 @@ jobs:
       - name: Run tests
         run: make test
 
-      - name: Configure git
-        run: |
-          git config --global user.name mostly-harmless-ai
-          git config --global user.email noreply@mostly-harmless.ai
-          ssh-add < echo "${{ secrets.DEPLOY_KEY }}"
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          user: mostly-harmless-ai
+          email: noreply@mostly-harmless.ai
+          global: true
+          actor: apiad
+          token: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Deploy tasks
         run: make deploy
