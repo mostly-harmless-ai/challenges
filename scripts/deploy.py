@@ -23,6 +23,9 @@ def rewrite(file: Path):
 
 
 project_folder = Path(__file__).parent.parent.absolute()
+
+print("PROJECT FOLDER", project_folder)
+
 tasks_folder = project_folder / "tasks"
 docs_folder = project_folder / "docs" / "tasks"
 
@@ -32,6 +35,7 @@ for file in tasks_folder.rglob("Readme.md"):
 
 for task in tasks_folder.iterdir():
     deploy_dir = project_folder / "deploy" / task.name
+    print("DEPLOY DIR", deploy_dir)
     shutil.rmtree(deploy_dir, ignore_errors=True)
 
     os.chdir(deploy_dir.parent)
