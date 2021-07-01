@@ -28,7 +28,7 @@ jobs:
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
+          personal_token: ${{ secrets.GIHUB_TOKEN }}
           external_repository: mostly-harmless-ai/mostly-harmless-ai.github.io
           publish_branch: docs
           publish_dir: ./site
