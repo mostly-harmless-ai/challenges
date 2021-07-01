@@ -43,3 +43,4 @@ jobs:
           external_repository: mostly-harmless-ai/mostly-harmless-ai.github.io
           publish_branch: docs
           publish_dir: ./site
+          force: true
