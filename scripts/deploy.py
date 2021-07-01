@@ -42,7 +42,11 @@ for task in tasks_folder.iterdir():
     shutil.rmtree(deploy_dir, ignore_errors=True)
 
     os.chdir(deploy_dir.parent)
-    os.system(f"git clone https://{USER}:{PASSWORD}@github.com/mostly-harmless-ai/{task.name}.git")
+
+    if USER and PASSWORD:
+        os.system(f"git clone https://{USER}:{PASSWORD}@github.com/mostly-harmless-ai/{task.name}.git")
+    else:
+        os.system(f"git clone https://github.com/mostly-harmless-ai/{task.name}.git")
 
     for fname in deploy_dir.iterdir():
         if fname.name == ".git":
@@ -56,6 +60,9 @@ for task in tasks_folder.iterdir():
     os.chdir(task.name)
     shutil.copytree(task, deploy_dir, dirs_exist_ok=True)
     shutil.copy2(project_folder / ".gitignore", deploy_dir / ".gitignore")
+    workflow_dir = deploy_dir / ".github" / "workflows"
+    workflow_dir.mkdir(parents=True)
+    shutil.copy2(project_folder / "scripts" / "test.yml", deploy_dir / ".github" / "workflows" / "test.yml")
 
     for fname in deploy_dir.rglob("*.py"):
         rewrite(fname)

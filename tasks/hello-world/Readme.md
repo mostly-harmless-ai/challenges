@@ -69,3 +69,15 @@ Start by pushing to your own fork, this should be as easy as:
 
 Go to your task fork in Github and look for the `Contribute` menu just under the green `Code`button.
 Click it and then click on `Create pull request`.
+Follow the instructions. On the description field, write a brief description about your solution.
+
+Wait for the Github CI to kick in, and run the tests.
+If you need help or feel stucked, just add a comment on the PR.
+
+## Get a badge!
+
+Once all tests have passed, this means your solution has been checked.
+One or more mentors from the community will come over and review your code, helping you improve it beyond passing the tests, commenting on best practices or ideas for alternative solutions.
+
+Once you're comfortable with your solution, ask a mentor to evaluate it.
+They will assign a `SUCCESS` label to your pull-request, and close it.
