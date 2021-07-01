@@ -22,8 +22,13 @@ jobs:
       - name: Run tests
         run: make test
 
-      - name: Run deploy
+      - name: Deploy tasks
         run: make deploy
 
-      - name: Run docs
-        run: make docs
+      - name: Deploy docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
+          external_repository: mostly-harmless-ai/mostly-harmless-ai.github.io
+          publish_branch: docs
+          publish_dir: ./site

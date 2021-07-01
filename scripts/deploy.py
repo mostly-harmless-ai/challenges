@@ -57,4 +57,6 @@ for task in tasks_folder.iterdir():
     for fname in deploy_dir.rglob("*.py"):
         rewrite(fname)
 
+    os.system("git config --local user.name 'mostly-harmless-ai'")
+    os.system("git config --local user.email 'noreply@mostly-harmless.ai'")
     os.system("git add . && git commit -m 'Deployed' && git push origin main")
