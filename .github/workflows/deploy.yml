@@ -28,7 +28,7 @@ jobs:
           email: noreply@mostly-harmless.ai
           global: true
           actor: apiad
-          token: '${{ secrets.GITHUB_TOKEN }}'
+          token: '${{ secrets.MOSTLY_HARMLESS_TASKS }}'
 
       - name: Deploy tasks
         run: make deploy
