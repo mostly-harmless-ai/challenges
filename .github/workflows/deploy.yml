@@ -42,5 +42,4 @@ jobs:
           personal_token: ${{ secrets.MOSTLY_HARMLESS_DOCS }}
           external_repository: mostly-harmless-ai/mostly-harmless-ai.github.io
           publish_branch: docs
-          publish_dir: ./site
-          force: true
+          force_orphan: true
