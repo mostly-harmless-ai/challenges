@@ -29,5 +29,6 @@ for task in tasks_folder.iterdir():
 
     os.chdir(task.name)
     shutil.copytree(task, deploy_dir, dirs_exist_ok=True)
+    shutil.copy2(project_folder / ".gitignore", deploy_dir / ".gitignore")
 
     os.system("git add . && git commit -m 'Deployed' && git push origin main")
