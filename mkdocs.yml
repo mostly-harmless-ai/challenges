@@ -3,8 +3,8 @@ site_url: https://mostly-harmless-ai.github.io
 
 theme: material
 repo_url: https://github.com/mostly-harmless-ai/challenges
-remote_branch: main
-remote_name: docs
+remote_branch: docs
+remote_name: git@github.com:mostly-harmless-ai/mostly-harmless-ai.github.io
 
 nav:
   - Home: index.md
