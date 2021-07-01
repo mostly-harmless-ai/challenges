@@ -1,3 +1,7 @@
-.PHONY: tasks
-tasks:
-	python scripts/make_tasks.py
+.PHONY: test
+test:
+	pytest tasks
+
+.PHONY: deploy
+deploy:
+	python scripts/deploy.py

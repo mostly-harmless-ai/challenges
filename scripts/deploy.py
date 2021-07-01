@@ -3,6 +3,25 @@ import shutil
 import os
 
 
+def rewrite(file: Path):
+    lines = []
+    state = "normal"
+
+    with file.open() as fp:
+        for line in fp:
+            if ":solution:" in line:
+                state = "solution"
+            elif ":end:" in line:
+                state = "normal"
+
+            if state == "normal" and not ":end:" in line:
+                lines.append(line)
+
+    with file.open("w") as fp:
+        for line in lines:
+            fp.write(line)
+
+
 project_folder = Path(__file__).parent.parent.absolute()
 tasks_folder = project_folder / "tasks"
 docs_folder = project_folder / "docs" / "tasks"
@@ -30,5 +49,8 @@ for task in tasks_folder.iterdir():
     os.chdir(task.name)
     shutil.copytree(task, deploy_dir, dirs_exist_ok=True)
     shutil.copy2(project_folder / ".gitignore", deploy_dir / ".gitignore")
+
+    for fname in deploy_dir.rglob("*.py"):
+        rewrite(fname)
 
     os.system("git add . && git commit -m 'Deployed' && git push origin main")
