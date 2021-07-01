@@ -1,5 +1,7 @@
 # Hello World
 
+[<img alt="GitHub pull requests by-label" src="https://img.shields.io/github/issues-pr/mostly-harmless-ai/hello-world/SUCCESS?color=green&label=Successful%20PRs&logo=github">](https://github.com/mostly-harmless-ai/hello-world/pulls?q=is%3Apr+is%3Aopen+label%3ASUCCESS)
+
 The purpose of this task is to get you started with the setup necessary for participating in the remaining challenges.
 As such, there is no real exercise here.
 We will focus instead on learning the workflow for participating on a task, submitting your code, and getting it evaluated.
