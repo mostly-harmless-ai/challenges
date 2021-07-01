@@ -32,6 +32,9 @@ jobs:
 
       - name: Deploy tasks
         run: make deploy
+        environment:
+          USER: apiad
+          PASSWORD: '${{ secrets.MOSTLY_HARMLESS_TASKS }}'
 
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
