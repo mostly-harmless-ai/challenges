@@ -30,5 +30,4 @@ for task in tasks_folder.iterdir():
     os.chdir(task.name)
     shutil.copytree(task, deploy_dir, dirs_exist_ok=True)
 
-    os.system("git add . && git commit -m 'Deployed'")
-    os.system(f"git push origin main")
+    os.system("git add . && git commit -m 'Deployed' && git push origin main")

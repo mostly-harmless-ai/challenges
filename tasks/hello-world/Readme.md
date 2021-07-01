@@ -3,7 +3,6 @@
 The purpose of this task is to get you started with the setup necessary for participating in the remaining challenges.
 As such, there is no real exercise here.
 We will focus instead on learning the workflow for participating on a task, submitting your code, and getting it evaluated.
-This task is also a guide for contributors designing new challenges.
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ These prerequisites are the minimum necessary for every other challenge.
 
 ## Setting up the coding environment
 
-The next step is to navigate to [this task's repository in Github](https://github.com/mostly-harmless-ai/task-hello-world).
+Navigate to [this task's repository in Github](https://github.com/mostly-harmless-ai/task-hello-world).
 On the top right corner of the main window you'll see a button titled `Fork`; click on it.
 Now follow the instructions and you'll have your own copy of the challenge in your own Github namespace.
 
@@ -38,8 +37,25 @@ Once you're safely inside your isolated environment, you can install the depende
 
 > 📝 If you prefer a different way of isolating your environment~(e.g., using Docker, conda environments, pyenv, Poetry, etc.) you are free to do so as well.
 
-## Adding your code
+## Task description
 
 Now you're ready to start hacking your solution!
+In a real task, this is the point where you do all the heavy work.
+In this task, though, since we're only concerned with learning the workflow, we crafted a silly exercise for you.
 
-Open `solution.py`.
+Open `hello_world.py` and modify the method called `answer` so that it reads:
+
+```python
+def answer():
+    return 42
+```
+
+That's it! Bonus points if you get the joke 😆.
+
+## Checking your code
+
+If you installed the required dependencies, you should be able to run:
+
+    pytest
+
+And get a pretty green message saying everything is OK!
