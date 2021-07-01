@@ -8,4 +8,4 @@ deploy:
 
 .PHONY: docs
 docs:
-	mkdocs gh-deploy
+	mkdocs gh-deploy --force
