@@ -24,8 +24,8 @@ jobs:
 
       - uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
-          name: mostly-harmless-ai
-          email: noreply@mostly-harmless.ai
+          name: apiad
+          email: alepiad@gmail.com
           global: true
           actor: apiad
           token: '${{ secrets.MOSTLY_HARMLESS_TASKS }}'
