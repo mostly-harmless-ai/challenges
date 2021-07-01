@@ -39,7 +39,7 @@ for task in tasks_folder.iterdir():
     shutil.rmtree(deploy_dir, ignore_errors=True)
 
     os.chdir(deploy_dir.parent)
-    os.system(f"git clone https://github.com/mostly-harmless-ai/{task.name}.git")
+    os.system(f"git clone git@github.com:mostly-harmless-ai/{task.name}.git")
 
     for fname in deploy_dir.iterdir():
         if fname.name == ".git":
@@ -57,6 +57,4 @@ for task in tasks_folder.iterdir():
     for fname in deploy_dir.rglob("*.py"):
         rewrite(fname)
 
-    os.system("git config --local user.name 'mostly-harmless-ai'")
-    os.system("git config --local user.email 'noreply@mostly-harmless.ai'")
     os.system("git add . && git commit -m 'Deployed' && git push origin main")
