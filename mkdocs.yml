@@ -1,0 +1,12 @@
+site_name: Mostly Harmless AI - Challenges
+site_url: https://mostly-harmless-ai.github.io
+
+theme: material
+repo_url: https://github.com/mostly-harmless-ai/challenges
+remote_branch: main
+remote_name: docs
+
+nav:
+  - Home: index.md
+  - Challenges:
+    - Hello World: tasks/hello-world.md
