@@ -67,6 +67,8 @@ And get a pretty green message saying everything is OK!
 Once solved and tested locally, you're ready to push your code.
 Start by pushing to your own fork, this should be as easy as:
 
+    git add hello_world.py
+    git commit -m 'Solve hello-word challenge'
     git push origin main
 
 Go to your task fork in Github and look for the `Contribute` menu just under the green `Code`button.
